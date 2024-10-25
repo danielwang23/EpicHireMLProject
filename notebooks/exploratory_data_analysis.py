@@ -6,14 +6,15 @@ import seaborn as sns
 print("Step 1: Checking current working directory:", os.getcwd())
 
 # Change the working directory to the Data-Science-Team folder
-project_dir = '/Users/danielwang/EpicHire/Data-Science-Team'
-os.chdir(project_dir)
+# project_dir = '/Users/danielwang/EpicHire/Data-Science-Team'
+# os.chdir(project_dir)
 
-print("Step 2: Changed new working directory to:", os.getcwd())
+# print("Step 2: Changed new working directory to:", os.getcwd())
+
 
 # Load the dataset
 print("Reading CSV file...")
-df = pd.read_csv('data/job_descriptions.csv')
+df = pd.read_csv('./Data-Science-Team/data/job_descriptions.csv')
 print("CSV file read successfully. Number of records:", len(df))
 
 
@@ -49,7 +50,7 @@ print("Key descriptions for the first 100 job postings:")
 print(df_filtered)
 
 # Optional: Save the table to a CSV file
-output_file = 'data/adjusted_top_100_job_descriptions.csv'
+output_file = './Data-Science-Team/data/adjusted_top_100_job_descriptions.csv'
 print(f"Step 8: Saving the filtered DataFrame to {output_file}...")
 df_filtered.to_csv(output_file, index=False)
 print("File saved successfully.")
